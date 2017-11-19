@@ -1,0 +1,838 @@
+[gd_scene load_steps=19 format=1]
+
+[ext_resource path="res://Assets/Meshes/junktion-3d-2.msh" type="Mesh" id=1]
+[ext_resource path="res://Scripts/spawn.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/lightcontrol.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Font/xkcd.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://Assets/Sprites/arrows.tex" type="Texture" id=5]
+[ext_resource path="res://Scripts/changebuttons.gd" type="Script" id=6]
+
+[sub_resource type="FixedMaterial" id=1]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 0.0
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.546875, 0.546875, 0.546875, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=2]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 3.72745e-43
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.526581, 0.664062, 0.535173, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 2
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=3]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 4.57888e-41
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.370789, 0.527344, 0.373235, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=4]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 4.57888e-41
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.710938, 0.697594, 0.369354, 1 )
+params/specular = Color( 0.574738, 0.578125, 0.469727, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=5]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 1.875
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.522095, 0.587009, 0.710938, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=6]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 1.875
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.601562, 0.542816, 0.542816, 1 )
+params/specular = Color( 0.664062, 0.643311, 0.643311, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=7]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 0.878431
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.339844, 0.339844, 0.339844, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="FixedMaterial" id=8]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 4.57888e-41
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 1, 1, 1, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="Curve3D" id=9]
+
+bake_interval = 0.2
+_data = {
+"points": Vector3Array( 0, 0, 0, 0, 0, 0, 0.249039, 0.0700183, -0.0161757, 0, 0, 0, 0, 0, 0, 2.53199, 0.0655918, -0.0157795, 0, 0, 0, 0, 0, 0, 3.04639, 0.0645945, -0.0156901, 0, 0, 0, 0, 0, 0, 3.61429, 0.0634934, -0.0155916, 0, 0, 0, 0, 0, 0, 4.13883, 0.0624763, -0.0155005, 0, 0, 0, 0, 0, 0, 4.67147, 0.0614436, -0.015408, 0, 0, 0, 0, 0, 0, 5.22077, 0.0603786, -0.0153127, 0, 0, 0, 0, 0, 0, 5.79184, 0.0592713, -0.0152135, 0, 0, 0, 0, 0, 0, 6.39863, 0.0580949, -0.0151081, 0, 0, 0, 0, 0, 0, 6.97573, 0.056976, -0.0150077, 0, 0, 0, 0, 0, 0, 15.9509, 0.0395739, -0.0134494 ),
+"tilts": FloatArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=10]
+
+bake_interval = 0.2
+_data = {
+"points": Vector3Array( 0, 0, 0, 0, 0, 0, 0.249039, 0.0700183, -0.0161757, 0, 0, 0, 0, 0, 0, 6.10965, 0.0752587, -0.00250483, 0, 0, 0, 0, 0, 0, 6.5437, 0.0756469, -0.00149226, 0, 0, 0, 0, 0, 0, 6.93023, 0.0759925, -0.000590563, 0, 0, 0, 0, 0, 0, 7.08148, 0.0761276, -0.000237703, 0, 0, 0, 0, 0, 0, 7.52028, 0.0957068, 0.167999, 0, 0, 0, 0, 0, 0, 7.74513, 0.0748826, 0.660147, 0, 0, 0, 0, 0, 0, 7.75322, 0.03777, 7.70579 ),
+"tilts": FloatArray( 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=11]
+
+bake_interval = 0.2
+_data = {
+"points": Vector3Array( 0, 0, 0, 0, 0, 0, 0.249039, 0.0700183, -0.0161757, 0, 0, 0, 0, 0, 0, 5.94526, 0.0751116, -0.0028882, 0, 0, 0, 0, 0, 0, 6.45378, 0.0755663, -0.00170207, 0, 0, 0, 0, 0, 0, 6.94422, 0.0760049, -0.000557899, 0, 0, 0, 0, 0, 0, 7.08148, 0.0761276, -0.000237703, 0, 0, 0, 0, 0, 0, 7.67823, 0.0535359, -0.142542, 0, 0, 0, 0, 0, 0, 8.05199, 0.0390179, -0.577605, 0, 0, 0, 0, 0, 0, 8.24275, 0.041467, -1.13282, 0, 0, 0, 0, 0, 0, 8.24312, 0.0412377, -1.67998, 0, 0, 0, 0, 0, 0, 8.24353, 0.0409852, -2.2826, 0, 0, 0, 0, 0, 0, 8.24751, 0.0385356, -8.13029 ),
+"tilts": FloatArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="PlaneShape" id=12]
+
+plane = Plane( 0, 1, 0, 0 )
+
+[node name="Ground" type="MeshInstance"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18006, -2.7595, 1.07314 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+material/2 = SubResource( 3 )
+material/3 = SubResource( 4 )
+material/4 = SubResource( 5 )
+material/5 = SubResource( 6 )
+material/6 = SubResource( 3 )
+material/7 = SubResource( 3 )
+material/8 = SubResource( 3 )
+material/9 = SubResource( 3 )
+material/10 = SubResource( 3 )
+material/11 = SubResource( 3 )
+material/12 = SubResource( 3 )
+material/13 = SubResource( 3 )
+material/14 = SubResource( 3 )
+material/15 = SubResource( 3 )
+material/16 = SubResource( 3 )
+material/17 = SubResource( 3 )
+material/18 = SubResource( 7 )
+material/19 = SubResource( 7 )
+material/20 = SubResource( 7 )
+material/21 = SubResource( 7 )
+material/22 = SubResource( 8 )
+
+[node name="GameElements" type="Node" parent="."]
+
+[node name="SpawnCenter" type="Position3D" parent="GameElements"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72398, -1.69342, -3.57624 )
+script/script = ExtResource( 2 )
+
+[node name="SpawnEast" type="Position3D" parent="GameElements/SpawnCenter"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0.25 )
+
+[node name="PathS" type="Path" parent="GameElements/SpawnCenter/SpawnEast"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 9 )
+
+[node name="PathFollow" type="PathFollow" parent="GameElements/SpawnCenter/SpawnEast/PathS"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.000173565, 0.00193898, -0.999998, 0, 0.999998, 0.00193898, 1, 3.36539e-07, -0.000173565, 0.249039, 0.0700183, -0.0161757 )
+visibility/visible = false
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotation_mode = 3
+cubic_interp = true
+loop = true
+lookahead = 0.1
+
+[node name="RayCast" type="RayCast" parent="GameElements/SpawnCenter/SpawnEast/PathS/PathFollow"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.3 )
+enabled = false
+cast_to = Vector3( 0, -1, 0 )
+layer_mask = 1
+type_mask = 15
+
+[node name="PathR" type="Path" parent="GameElements/SpawnCenter/SpawnEast"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 10 )
+
+[node name="PathL" type="Path" parent="GameElements/SpawnCenter/SpawnEast"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 11 )
+
+[node name="SpawnWest" type="Position3D" parent="GameElements/SpawnCenter"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 8, 0, -0.25 )
+
+[node name="PathS" type="Path" parent="GameElements/SpawnCenter/SpawnWest"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 9 )
+
+[node name="PathR" type="Path" parent="GameElements/SpawnCenter/SpawnWest"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 10 )
+
+[node name="PathL" type="Path" parent="GameElements/SpawnCenter/SpawnWest"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 11 )
+
+[node name="SpawnNorth" type="Position3D" parent="GameElements/SpawnCenter"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.25, 0, 8 )
+
+[node name="PathS" type="Path" parent="GameElements/SpawnCenter/SpawnNorth"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 9 )
+
+[node name="PathR" type="Path" parent="GameElements/SpawnCenter/SpawnNorth"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 10 )
+
+[node name="PathL" type="Path" parent="GameElements/SpawnCenter/SpawnNorth"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 11 )
+
+[node name="SpawnSouth" type="Position3D" parent="GameElements/SpawnCenter"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.25, 0, -8 )
+
+[node name="PathS" type="Path" parent="GameElements/SpawnCenter/SpawnSouth"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 9 )
+
+[node name="PathR" type="Path" parent="GameElements/SpawnCenter/SpawnSouth"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 10 )
+
+[node name="PathL" type="Path" parent="GameElements/SpawnCenter/SpawnSouth"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+curve = SubResource( 11 )
+
+[node name="Junction" type="Node" parent="GameElements"]
+
+[node name="StopLight" type="StaticBody" parent="GameElements/Junction"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92603, -1.53645, -3.8151 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 0, 0, 0, 0.01, -0.253472, -0.1, 0 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+script/script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GameElements/Junction/StopLight"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 0, 0, 0, 0.01, -0.253472, -0.1, 0 )
+shape = SubResource( 12 )
+trigger = true
+_update_shape_index = 0
+
+[node name="SpotLight" type="SpotLight" parent="GameElements/Junction/StopLight"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.0283122, 0.744406, -0.667127, 3.25521e-08, 0.667394, 0.744705, 0.999599, 0.0210842, -0.0188954, -0.418947, 0.573751, 0.167366 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 0.215686, 0.941176, 0.313726, 1 )
+colors/specular = Color( 0.304688, 0.304688, 0.304688, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+params/radius = 2.0
+params/attenuation = 1.0
+params/spot_angle = 50.0
+params/spot_attenuation = 1.0
+
+[node name="StopLight1" type="StaticBody" parent="GameElements/Junction"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.95271, -1.53645, -2.28484 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 0, 0, 0, 0.01, 0.209755, -0.1, 0 )
+shapes/0/trigger = true
+collision/layers = 2
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+script/script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GameElements/Junction/StopLight1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 0, 0, 0, 0.01, 0.209755, -0.1, 0 )
+shape = SubResource( 12 )
+trigger = true
+_update_shape_index = 0
+
+[node name="SpotLight" type="SpotLight" parent="GameElements/Junction/StopLight1"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.0707429, -0.742839, 0.665722, -4.64966e-08, 0.667394, 0.744705, -0.997495, -0.0526826, 0.0472134, 0.487601, 0.573751, -0.116277 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 0.234375, 0.234375, 1 )
+colors/specular = Color( 0.304688, 0.304688, 0.304688, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+params/radius = 2.0
+params/attenuation = 1.0
+params/spot_angle = 50.0
+params/spot_attenuation = 1.0
+
+[node name="StopLight2" type="StaticBody" parent="GameElements/Junction"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.56696, -1.53645, -3.37246 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 0, 0, 0, 0.01, -0.351402, -0.1, 0 )
+shapes/0/trigger = true
+collision/layers = 4
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+script/script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GameElements/Junction/StopLight2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 0, 0, 0, 0.01, -0.351402, -0.1, 0 )
+shape = SubResource( 12 )
+trigger = true
+_update_shape_index = 0
+
+[node name="SpotLight" type="SpotLight" parent="GameElements/Junction/StopLight2"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.109336, 0.74024, -0.663393, -4.64966e-08, 0.667394, 0.744705, 0.994005, 0.0814227, -0.0729699, -0.608104, 0.573751, 0.301513 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 0.234375, 0.234375, 1 )
+colors/specular = Color( 0.304688, 0.304688, 0.304688, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+params/radius = 2.0
+params/attenuation = 1.0
+params/spot_angle = 50.0
+params/spot_attenuation = 1.0
+
+[node name="StopLight3" type="StaticBody" parent="GameElements/Junction"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 4.37114e-08, 3.82137e-15, 1, -1.74846e-07, 1, 3.82137e-15, -1, -1.74846e-07, 4.37114e-08, 2.44352, -1.53645, -4.7953 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 6.61744e-24, -2.64698e-23, 0, 0.01, -0.277652, -0.1, 0 )
+shapes/0/trigger = true
+collision/layers = 8
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+script/script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GameElements/Junction/StopLight3"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -8.74228e-10, -0.05, 0, 0.02, -2.18557e-09, 6.61744e-24, -2.64698e-23, 0, 0.01, -0.277652, -0.1, 0 )
+shape = SubResource( 12 )
+trigger = true
+_update_shape_index = 0
+
+[node name="SpotLight" type="SpotLight" parent="GameElements/Junction/StopLight3"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.0656952, 0.743096, -0.665953, -5.79831e-08, 0.667394, 0.744704, 0.99784, 0.0489236, -0.0438446, -0.462798, 0.573751, 0.170623 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 0.234375, 0.234375, 1 )
+colors/specular = Color( 0.304688, 0.304688, 0.304688, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+params/radius = 2.0
+params/attenuation = 1.0
+params/spot_angle = 50.0
+params/spot_attenuation = 1.0
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Score" type="Label" parent="UI"]
+
+rect/rotation = 23.0
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 502.0
+margin/top = 1091.0
+margin/right = 592.0
+margin/bottom = 1144.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.177002, 0.204525, 0.3125, 1 )
+custom_constants/line_spacing = 4
+text = "SCORE"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Buttons" type="Sprite3D" parent="UI"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.4, 0, -3.49691e-08, -3.49691e-08, -1.74846e-08, 0.4, -1.52855e-15, 0.4, 1.74846e-08, 2.73614, -1.773, -3.57723 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+flags/transparent = true
+flags/shaded = false
+flags/double_sided = true
+flags/on_top = false
+flags/alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 1
+frame = 0
+region = false
+region_rect = Rect2( 0, 0, 0, 0 )
+script/script = ExtResource( 6 )
+
+[node name="Cam+Light" type="Node" parent="."]
+
+[node name="Camera" type="Camera" parent="Cam+Light"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.875023, -0.357758, 0.326104, 0.0173761, 0.650009, 0.759728, -0.483769, 0.670446, -0.562556, 4.97856, 3.23288, -6.98066 )
+projection = 1
+size = 8.0
+near = 0.1
+far = 100.0
+keep_aspect = 0
+current = false
+visible_layers = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Cam+Light"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.932339, 0.304129, 0.195574, -0.13105, -0.219889, 0.966682, 0.337001, -0.926906, -0.165155, 4.22578, 4.22368, -24.4223 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 0.7
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = true
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 10.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="DirectionalLight1" type="DirectionalLight" parent="Cam+Light"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.67127, -0.535776, 0.512192, -0.638524, -0.0670754, 0.766674, -0.37641, -0.841692, -0.387131, 7.6161, 7.56422, 0 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = true
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 15.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="OmniLight" type="OmniLight" parent="Cam+Light"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.425562, 9.29167, 0.00790787 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.001
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+params/radius = 2.0
+params/attenuation = 1.0
+
+

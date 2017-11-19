@@ -1,0 +1,7 @@
+[gd_scene format=1]
+
+[node name="Sprite" type="Sprite"]
+
+transform/scale = Vector2( 1027.54, 600.196 )
+
+
